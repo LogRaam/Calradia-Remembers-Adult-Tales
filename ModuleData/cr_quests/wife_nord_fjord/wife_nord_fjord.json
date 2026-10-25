@@ -1,0 +1,426 @@
+{
+  "id": "crit_wife_nord_fjord",
+  "title": "The Cold Water",
+  "author": "Gabriel Mailhot",
+  "requires": {
+    "giver": {
+      "role": "spouse",
+      "gender": "female",
+      "culture": "nord",
+      "with_player": true,
+      "not_pregnant": true,
+      "min_regard": 10,
+      "not_at_war_with_player": false
+    },
+    "content": "explicit"
+  },
+  "on_map": {
+    "still_hours": 3,
+    "by_day": true,
+    "in_givers_lands": true,
+    "chance_per_day": 0.15,
+    "invitation": "While your company makes camp above the fjord, {giver} walks down to the icy shore in only her wool shift, as the women of her people do to harden themselves against the winter. She looks back up at you, laughing, and wades in.",
+    "accept": "Follow her",
+    "decline": "Let her have her solitude"
+  },
+  "binds": {
+    "giver": "the player's Nord wife, travelling with them"
+  },
+  "stages": [
+    {
+      "id": "invite",
+      "journal": "{giver} went down to the fjord for the cold plunge of her people.",
+      "objective": {
+        "type": "talk_to",
+        "hero": "{giver}"
+      },
+      "on_complete": {
+        "next": "found"
+      }
+    },
+    {
+      "id": "found",
+      "journal": "You found {giver} in the icy fjord.",
+      "image": "1_found_bathing.jpg",
+      "canvas": "You went down to plunge into the icy fjord in your thin wool shift, as the women of your people do. You know the player followed you; let them see that the cold does not frighten you.",
+      "choices": [
+        {
+          "id": "joins",
+          "label": "She comes to you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she sees the player and wades over to them, or the player goes to her, and they come close together"
+          },
+          "next": "together"
+        }
+      ]
+    },
+    {
+      "id": "together",
+      "journal": "{giver} comes out of the icy water to you.",
+      "image": "3_she_joins_him.jpg",
+      "canvas": "You have waded out of the icy water to the player, laughing, red with the cold, your shift clinging to you. Their warmth is what you want now.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She lies down on the shore",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she lies back on the stony shore and draws the player to her to be warmed"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "shoulder",
+      "journal": "{giver}'s shoulder.",
+      "image": "2_shoulder.jpg",
+      "canvas": "Your shoulder is red with the cold and wet with the fjord; you let the player look.",
+      "choices": [
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She lies down on the shore",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she lies back on the stony shore and draws the player to her to be warmed"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "breast",
+      "journal": "You admire {giver}.",
+      "image": "4_breast.jpg",
+      "canvas": "You fold your arms over your breasts against the cold, and look at the player boldly.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She lies down on the shore",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she lies back on the stony shore and draws the player to her to be warmed"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "hips",
+      "journal": "{giver} turns her back to you.",
+      "image": "5_hips.jpg",
+      "canvas": "You have turned your back to the player in the icy shallows, your wet shift clinging to you.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She lies down on the shore",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she lies back on the stony shore and draws the player to her to be warmed"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "belly",
+      "journal": "You warm {giver}.",
+      "image": "6_belly.jpg",
+      "canvas": "The player's warm hand is on your cold belly, and you laugh at the shock of it.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She lies down on the shore",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she lies back on the stony shore and draws the player to her to be warmed"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "legs",
+      "journal": "{giver} lifts her shift.",
+      "image": "7_legs.jpg",
+      "canvas": "You lift your wet shift above your reddened knees in the icy water.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "invitation",
+          "label": "She lies down on the shore",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she lies back on the stony shore and draws the player to her to be warmed"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "invitation",
+      "journal": "{giver} lies back on the shore and draws you to her.",
+      "image": "8_invitation.jpg",
+      "canvas": "You have lain back on the cold stones of the shore and you draw the player to you; you want their warmth.",
+      "choices": [
+        {
+          "id": "as_one",
+          "label": "You are together",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they make love, or their lovemaking reaches its end"
+          },
+          "next": "reward"
+        },
+        {
+          "id": "back",
+          "label": "Not yet",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they linger and return to the water together, not yet ready"
+          },
+          "next": "together"
+        }
+      ]
+    }
+  ],
+  "reward": {
+    "regard": 8,
+    "memory": "A cold day by the fjord of my people, when my spouse followed me into the icy water and warmed me after.",
+    "journal": "A day by the icy fjord that neither of you will forget.",
+    "consequences": [
+      {
+        "type": "conception",
+        "who": "{giver}"
+      }
+    ]
+  },
+  "failure": {
+    "days": 2
+  }
+}

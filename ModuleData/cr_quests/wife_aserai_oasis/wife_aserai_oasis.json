@@ -1,0 +1,1350 @@
+{
+  "id": "crit_wife_aserai_oasis",
+  "title": "The Hidden Oasis",
+  "author": "Gabriel Mailhot",
+  "requires": {
+    "giver": {
+      "role": "spouse",
+      "gender": "female",
+      "culture": "aserai",
+      "with_player": true,
+      "not_pregnant": true,
+      "min_regard": 10,
+      "not_at_war_with_player": false
+    },
+    "content": "explicit"
+  },
+  "on_map": {
+    "still_hours": 3,
+    "by_day": true,
+    "in_givers_lands": true,
+    "chance_per_day": 0.15,
+    "invitation": "In the heat of the afternoon, while your company rests in the shade of the dunes, {giver} takes a water skin and walks toward the palms of a hidden oasis. She looks back at you over her shoulder, a slow smile, and goes on alone.",
+    "accept": "Follow her",
+    "decline": "Let her have her solitude"
+  },
+  "binds": {
+    "giver": "the player's Aserai wife, travelling with them"
+  },
+  "stages": [
+    {
+      "id": "invite",
+      "journal": "{giver} walked off toward the palms of a hidden oasis.",
+      "objective": {
+        "type": "talk_to",
+        "hero": "{giver}"
+      },
+      "on_complete": {
+        "next": "found"
+      }
+    },
+    {
+      "id": "found",
+      "journal": "You found {giver} bathing in the oasis.",
+      "image": "1_found_bathing.jpg",
+      "canvas": "You walked to the hidden oasis to bathe in its cool green water, in your thin embroidered robe and your beads, while the camp rests through the heat. You know the player followed you; you let them find you, and you are glad of it.",
+      "choices": [
+        {
+          "id": "joins",
+          "label": "She comes to you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she sees the player and wades over to them, or the player goes to her, and they come close together"
+          },
+          "next": "together"
+        }
+      ]
+    },
+    {
+      "id": "together",
+      "journal": "{giver} has come to you.",
+      "image": "3_she_joins_him.jpg",
+      "canvas": "You have walked out of the water to the player, the wet robe clinging to you, smiling. An hour alone with your spouse, far from the camp, in the land of your people.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "breast_shy",
+          "label": "She teases you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she folds her arms over her breasts, playful, making the player wait"
+          },
+          "next": "breast_shy"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "hips_close",
+          "label": "Closer behind her",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player comes close behind her, or she leans back against the player"
+          },
+          "next": "hips_close"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "belly_close",
+          "label": "Your touch",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's hand or lips are on her belly and waist"
+          },
+          "next": "belly_close"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you down onto the sand",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she draws the player down onto the warm sand and comes over them, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "shoulder",
+      "journal": "{giver}'s shoulder.",
+      "image": "2_shoulder.jpg",
+      "canvas": "The wet robe clings to your shoulder and your beads lie warm on your skin; you let the player look, wholly at ease.",
+      "choices": [
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "breast_shy",
+          "label": "She teases you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she folds her arms over her breasts, playful, making the player wait"
+          },
+          "next": "breast_shy"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "hips_close",
+          "label": "Closer behind her",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player comes close behind her, or she leans back against the player"
+          },
+          "next": "hips_close"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "belly_close",
+          "label": "Your touch",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's hand or lips are on her belly and waist"
+          },
+          "next": "belly_close"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you down onto the sand",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she draws the player down onto the warm sand and comes over them, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "breast",
+      "journal": "You admire {giver}.",
+      "image": "4a_breast.jpg",
+      "canvas": "The player admires your breasts through the soaked robe, and you welcome it.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast_shy",
+          "label": "She teases you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she folds her arms over her breasts, playful, making the player wait"
+          },
+          "next": "breast_shy"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "hips_close",
+          "label": "Closer behind her",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player comes close behind her, or she leans back against the player"
+          },
+          "next": "hips_close"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "belly_close",
+          "label": "Your touch",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's hand or lips are on her belly and waist"
+          },
+          "next": "belly_close"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you down onto the sand",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she draws the player down onto the warm sand and comes over them, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "breast_shy",
+      "journal": "{giver} teases you.",
+      "image": "4b_breast.jpg",
+      "canvas": "You fold your arms over your breasts, teasing the player, letting them wait.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "hips_close",
+          "label": "Closer behind her",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player comes close behind her, or she leans back against the player"
+          },
+          "next": "hips_close"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "belly_close",
+          "label": "Your touch",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's hand or lips are on her belly and waist"
+          },
+          "next": "belly_close"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you down onto the sand",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she draws the player down onto the warm sand and comes over them, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "hips",
+      "journal": "{giver} turns her back to you.",
+      "image": "5a_hips.jpg",
+      "canvas": "You have turned your back to the player in the shallows, your hands on your hips, the wet robe clinging to you.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "breast_shy",
+          "label": "She teases you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she folds her arms over her breasts, playful, making the player wait"
+          },
+          "next": "breast_shy"
+        },
+        {
+          "id": "hips_close",
+          "label": "Closer behind her",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player comes close behind her, or she leans back against the player"
+          },
+          "next": "hips_close"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "belly_close",
+          "label": "Your touch",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's hand or lips are on her belly and waist"
+          },
+          "next": "belly_close"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you down onto the sand",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she draws the player down onto the warm sand and comes over them, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "hips_close",
+      "journal": "{giver} leans back against you.",
+      "image": "5b_hips.jpg",
+      "canvas": "The player is close behind you, and you lean back against them.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "breast_shy",
+          "label": "She teases you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she folds her arms over her breasts, playful, making the player wait"
+          },
+          "next": "breast_shy"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "belly_close",
+          "label": "Your touch",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's hand or lips are on her belly and waist"
+          },
+          "next": "belly_close"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you down onto the sand",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she draws the player down onto the warm sand and comes over them, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "belly",
+      "journal": "{giver} lifts her robe.",
+      "image": "6a_belly.jpg",
+      "canvas": "You lift the wet robe from your belly, slowly, watching the player watch you.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "breast_shy",
+          "label": "She teases you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she folds her arms over her breasts, playful, making the player wait"
+          },
+          "next": "breast_shy"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "hips_close",
+          "label": "Closer behind her",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player comes close behind her, or she leans back against the player"
+          },
+          "next": "hips_close"
+        },
+        {
+          "id": "belly_close",
+          "label": "Your touch",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's hand or lips are on her belly and waist"
+          },
+          "next": "belly_close"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you down onto the sand",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she draws the player down onto the warm sand and comes over them, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "belly_close",
+      "journal": "You touch {giver}.",
+      "image": "6b_belly_closeup.jpg",
+      "canvas": "The player's touch is on your belly and waist, and you shiver in the heat.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "breast_shy",
+          "label": "She teases you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she folds her arms over her breasts, playful, making the player wait"
+          },
+          "next": "breast_shy"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "hips_close",
+          "label": "Closer behind her",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player comes close behind her, or she leans back against the player"
+          },
+          "next": "hips_close"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you down onto the sand",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she draws the player down onto the warm sand and comes over them, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "legs",
+      "journal": "{giver} lifts the hem of her robe.",
+      "image": "7_legs.jpg",
+      "canvas": "You gather your robe above your knees and step through the shallows toward the player.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "breast_shy",
+          "label": "She teases you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she folds her arms over her breasts, playful, making the player wait"
+          },
+          "next": "breast_shy"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "hips_close",
+          "label": "Closer behind her",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player comes close behind her, or she leans back against the player"
+          },
+          "next": "hips_close"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "belly_close",
+          "label": "Your touch",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's hand or lips are on her belly and waist"
+          },
+          "next": "belly_close"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you down onto the sand",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she draws the player down onto the warm sand and comes over them, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "invitation",
+      "journal": "{giver} draws you down onto the sand.",
+      "image": "8a_invitation.jpg",
+      "canvas": "You have drawn the player down onto the warm sand and you lean over them, your braids falling around you, inviting them.",
+      "choices": [
+        {
+          "id": "above_you",
+          "label": "She is above you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she is above the player on the warm sand, under the evening sky"
+          },
+          "next": "above_you"
+        },
+        {
+          "id": "nothing_held_back",
+          "label": "Nothing held back",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they give themselves to each other wholly, holding nothing back"
+          },
+          "next": "nothing_held_back"
+        },
+        {
+          "id": "her_hands",
+          "label": "She guides your hands",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she takes the player's hands and guides them to her"
+          },
+          "next": "her_hands"
+        },
+        {
+          "id": "her_glow",
+          "label": "She smiles down at you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she smiles down at the player, glowing in the last light"
+          },
+          "next": "her_glow"
+        },
+        {
+          "id": "laughing",
+          "label": "Laughing in the sand",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they lie together in the warm sand and laugh softly"
+          },
+          "next": "laughing"
+        },
+        {
+          "id": "burning_sky",
+          "label": "Under the burning sky",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the sky burns above them and they are wholly each other's"
+          },
+          "next": "burning_sky"
+        },
+        {
+          "id": "back",
+          "label": "Not yet",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they linger and return to the water together, not yet ready"
+          },
+          "next": "together"
+        }
+      ]
+    },
+    {
+      "id": "above_you",
+      "journal": "With {giver} under the evening sky.",
+      "image": "8b_invitation.jpg",
+      "canvas": "You are with the player on the warm sand under the evening sky, above them.",
+      "choices": [
+        {
+          "id": "nothing_held_back",
+          "label": "Nothing held back",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they give themselves to each other wholly, holding nothing back"
+          },
+          "next": "nothing_held_back"
+        },
+        {
+          "id": "her_hands",
+          "label": "She guides your hands",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she takes the player's hands and guides them to her"
+          },
+          "next": "her_hands"
+        },
+        {
+          "id": "her_glow",
+          "label": "She smiles down at you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she smiles down at the player, glowing in the last light"
+          },
+          "next": "her_glow"
+        },
+        {
+          "id": "laughing",
+          "label": "Laughing in the sand",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they lie together in the warm sand and laugh softly"
+          },
+          "next": "laughing"
+        },
+        {
+          "id": "burning_sky",
+          "label": "Under the burning sky",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the sky burns above them and they are wholly each other's"
+          },
+          "next": "burning_sky"
+        },
+        {
+          "id": "as_one",
+          "label": "You are together",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they make love, or their lovemaking reaches its end"
+          },
+          "next": "after"
+        }
+      ]
+    },
+    {
+      "id": "nothing_held_back",
+      "journal": "With {giver}.",
+      "image": "8c_invitation.jpg",
+      "canvas": "You and the player are lovers under the burning sky; you hold nothing back.",
+      "choices": [
+        {
+          "id": "above_you",
+          "label": "She is above you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she is above the player on the warm sand, under the evening sky"
+          },
+          "next": "above_you"
+        },
+        {
+          "id": "her_hands",
+          "label": "She guides your hands",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she takes the player's hands and guides them to her"
+          },
+          "next": "her_hands"
+        },
+        {
+          "id": "her_glow",
+          "label": "She smiles down at you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she smiles down at the player, glowing in the last light"
+          },
+          "next": "her_glow"
+        },
+        {
+          "id": "laughing",
+          "label": "Laughing in the sand",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they lie together in the warm sand and laugh softly"
+          },
+          "next": "laughing"
+        },
+        {
+          "id": "burning_sky",
+          "label": "Under the burning sky",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the sky burns above them and they are wholly each other's"
+          },
+          "next": "burning_sky"
+        },
+        {
+          "id": "as_one",
+          "label": "You are together",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they make love, or their lovemaking reaches its end"
+          },
+          "next": "after"
+        }
+      ]
+    },
+    {
+      "id": "her_hands",
+      "journal": "With {giver}.",
+      "image": "8d_invitation.jpg",
+      "canvas": "You guide the player's hands to you as the sun goes down.",
+      "choices": [
+        {
+          "id": "above_you",
+          "label": "She is above you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she is above the player on the warm sand, under the evening sky"
+          },
+          "next": "above_you"
+        },
+        {
+          "id": "nothing_held_back",
+          "label": "Nothing held back",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they give themselves to each other wholly, holding nothing back"
+          },
+          "next": "nothing_held_back"
+        },
+        {
+          "id": "her_glow",
+          "label": "She smiles down at you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she smiles down at the player, glowing in the last light"
+          },
+          "next": "her_glow"
+        },
+        {
+          "id": "laughing",
+          "label": "Laughing in the sand",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they lie together in the warm sand and laugh softly"
+          },
+          "next": "laughing"
+        },
+        {
+          "id": "burning_sky",
+          "label": "Under the burning sky",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the sky burns above them and they are wholly each other's"
+          },
+          "next": "burning_sky"
+        },
+        {
+          "id": "as_one",
+          "label": "You are together",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they make love, or their lovemaking reaches its end"
+          },
+          "next": "after"
+        }
+      ]
+    },
+    {
+      "id": "her_glow",
+      "journal": "With {giver}.",
+      "image": "8e_invitation.jpg",
+      "canvas": "You smile down at the player, glowing in the last light.",
+      "choices": [
+        {
+          "id": "above_you",
+          "label": "She is above you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she is above the player on the warm sand, under the evening sky"
+          },
+          "next": "above_you"
+        },
+        {
+          "id": "nothing_held_back",
+          "label": "Nothing held back",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they give themselves to each other wholly, holding nothing back"
+          },
+          "next": "nothing_held_back"
+        },
+        {
+          "id": "her_hands",
+          "label": "She guides your hands",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she takes the player's hands and guides them to her"
+          },
+          "next": "her_hands"
+        },
+        {
+          "id": "laughing",
+          "label": "Laughing in the sand",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they lie together in the warm sand and laugh softly"
+          },
+          "next": "laughing"
+        },
+        {
+          "id": "burning_sky",
+          "label": "Under the burning sky",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the sky burns above them and they are wholly each other's"
+          },
+          "next": "burning_sky"
+        },
+        {
+          "id": "as_one",
+          "label": "You are together",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they make love, or their lovemaking reaches its end"
+          },
+          "next": "after"
+        }
+      ]
+    },
+    {
+      "id": "laughing",
+      "journal": "With {giver}.",
+      "image": "8f_invitation.jpg",
+      "canvas": "You lie with the player in the warm sand, laughing softly.",
+      "choices": [
+        {
+          "id": "above_you",
+          "label": "She is above you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she is above the player on the warm sand, under the evening sky"
+          },
+          "next": "above_you"
+        },
+        {
+          "id": "nothing_held_back",
+          "label": "Nothing held back",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they give themselves to each other wholly, holding nothing back"
+          },
+          "next": "nothing_held_back"
+        },
+        {
+          "id": "her_hands",
+          "label": "She guides your hands",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she takes the player's hands and guides them to her"
+          },
+          "next": "her_hands"
+        },
+        {
+          "id": "her_glow",
+          "label": "She smiles down at you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she smiles down at the player, glowing in the last light"
+          },
+          "next": "her_glow"
+        },
+        {
+          "id": "burning_sky",
+          "label": "Under the burning sky",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the sky burns above them and they are wholly each other's"
+          },
+          "next": "burning_sky"
+        },
+        {
+          "id": "as_one",
+          "label": "You are together",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they make love, or their lovemaking reaches its end"
+          },
+          "next": "after"
+        }
+      ]
+    },
+    {
+      "id": "burning_sky",
+      "journal": "With {giver}.",
+      "image": "8g_invitation.jpg",
+      "canvas": "The sky burns above you both; you are wholly the player's and they are yours.",
+      "choices": [
+        {
+          "id": "above_you",
+          "label": "She is above you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she is above the player on the warm sand, under the evening sky"
+          },
+          "next": "above_you"
+        },
+        {
+          "id": "nothing_held_back",
+          "label": "Nothing held back",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they give themselves to each other wholly, holding nothing back"
+          },
+          "next": "nothing_held_back"
+        },
+        {
+          "id": "her_hands",
+          "label": "She guides your hands",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she takes the player's hands and guides them to her"
+          },
+          "next": "her_hands"
+        },
+        {
+          "id": "her_glow",
+          "label": "She smiles down at you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she smiles down at the player, glowing in the last light"
+          },
+          "next": "her_glow"
+        },
+        {
+          "id": "laughing",
+          "label": "Laughing in the sand",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they lie together in the warm sand and laugh softly"
+          },
+          "next": "laughing"
+        },
+        {
+          "id": "as_one",
+          "label": "You are together",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they make love, or their lovemaking reaches its end"
+          },
+          "next": "after"
+        }
+      ]
+    },
+    {
+      "id": "after",
+      "journal": "Afterwards, {giver} smiles at you.",
+      "image": "9a_pretty_smile.jpg",
+      "canvas": "It is over, and you lie in the warm sand with the player, smiling, in no hurry to go back.",
+      "choices": [
+        {
+          "id": "her_smile",
+          "label": "Her happy smile",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she smiles at the player, happy, sand on her skin"
+          },
+          "next": "her_smile"
+        },
+        {
+          "id": "at_sunset",
+          "label": "As the sun sets",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the sun sets and she looks at the player a long while, content"
+          },
+          "next": "at_sunset"
+        },
+        {
+          "id": "rest",
+          "label": "Back to the camp",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they rest, dress, or speak of going back to the camp"
+          },
+          "next": "reward"
+        }
+      ]
+    },
+    {
+      "id": "her_smile",
+      "journal": "{giver} smiles.",
+      "image": "9b_pretty_smile.jpg",
+      "canvas": "You smile at the player, sand on your skin, happy.",
+      "choices": [
+        {
+          "id": "after",
+          "label": "Resting together",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they rest together afterwards in the warm sand"
+          },
+          "next": "after"
+        },
+        {
+          "id": "at_sunset",
+          "label": "As the sun sets",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the sun sets and she looks at the player a long while, content"
+          },
+          "next": "at_sunset"
+        },
+        {
+          "id": "rest",
+          "label": "Back to the camp",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they rest, dress, or speak of going back to the camp"
+          },
+          "next": "reward"
+        }
+      ]
+    },
+    {
+      "id": "at_sunset",
+      "journal": "{giver} looks at you.",
+      "image": "9c_pretty_face.jpg",
+      "canvas": "The sun is setting; you look at the player a long while, content.",
+      "choices": [
+        {
+          "id": "after",
+          "label": "Resting together",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they rest together afterwards in the warm sand"
+          },
+          "next": "after"
+        },
+        {
+          "id": "her_smile",
+          "label": "Her happy smile",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she smiles at the player, happy, sand on her skin"
+          },
+          "next": "her_smile"
+        },
+        {
+          "id": "rest",
+          "label": "Back to the camp",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they rest, dress, or speak of going back to the camp"
+          },
+          "next": "reward"
+        }
+      ]
+    }
+  ],
+  "reward": {
+    "regard": 8,
+    "memory": "An afternoon at a hidden oasis in the land of my people, when my spouse followed me and we were alone together until sunset.",
+    "journal": "An afternoon at the hidden oasis that neither of you will forget.",
+    "consequences": [
+      {
+        "type": "conception",
+        "who": "{giver}"
+      }
+    ]
+  },
+  "failure": {
+    "days": 2
+  }
+}

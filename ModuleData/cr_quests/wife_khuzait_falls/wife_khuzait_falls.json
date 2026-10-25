@@ -1,0 +1,146 @@
+{
+  "id": "crit_wife_khuzait_falls",
+  "title": "Beneath the Falls",
+  "author": "Gabriel Mailhot",
+  "requires": {
+    "giver": {
+      "role": "spouse",
+      "gender": "female",
+      "culture": "khuzait",
+      "with_player": true,
+      "not_pregnant": true,
+      "min_regard": 10,
+      "not_at_war_with_player": false
+    },
+    "content": "explicit"
+  },
+  "on_map": {
+    "still_hours": 3,
+    "by_day": true,
+    "in_givers_lands": true,
+    "chance_per_day": 0.15,
+    "invitation": "While your company makes camp on the edge of the steppe, {giver} slips away toward the sound of falling water, a linen cloth over her arm. At the line of the birches she glances back at you, once, and is gone.",
+    "accept": "Follow her",
+    "decline": "Let her have her solitude"
+  },
+  "binds": {
+    "giver": "the player's Khuzait wife, travelling with them"
+  },
+  "stages": [
+    {
+      "id": "invite",
+      "journal": "{giver} slipped away from the camp toward the falls.",
+      "objective": { "type": "talk_to", "hero": "{giver}" },
+      "on_complete": { "next": "found" }
+    },
+    {
+      "id": "found",
+      "journal": "You found {giver} bathing beneath the falls.",
+      "image": "1_found_bathing.jpg",
+      "canvas": "You slipped away from the camp to bathe alone beneath the falls, as the women of your people do in summer, in your long linen dress. The player followed you and has just found you in the pool. You are not displeased to be found.",
+      "choices": [
+        { "id": "joins", "label": "She comes to you", "said": { "to": "{giver}", "meaning": "she wades over to the player, or the player goes to her, and they are close together in the water" }, "next": "together" }
+      ]
+    },
+    {
+      "id": "together",
+      "journal": "{giver} has come to you in the water.",
+      "image": "3_she_joins_him.jpg",
+      "canvas": "You have waded to the player, soaked and smiling; the wet linen clings to you. You are glad of this hour alone with your spouse, far from the camp and the eyes of others, in the land of your own people.",
+      "choices": [
+        { "id": "shoulder", "label": "Her shoulder", "said": { "to": "{giver}", "meaning": "the player's attention turns to her shoulder, or her dress slips from it" }, "next": "shoulder" },
+        { "id": "breast", "label": "Her breast", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her breasts" }, "next": "breast" },
+        { "id": "hips", "label": "Her hips", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player" }, "next": "hips" },
+        { "id": "belly", "label": "Her belly", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her belly and waist" }, "next": "belly" },
+        { "id": "legs", "label": "Her legs", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress" }, "next": "legs" },
+        { "id": "invitation", "label": "She lies down and invites you", "said": { "to": "{giver}", "meaning": "she lies back on the moss by the pool and invites the player to her" }, "next": "invitation" }
+      ]
+    },
+    {
+      "id": "shoulder",
+      "journal": "{giver}'s wet dress has slipped from one shoulder.",
+      "image": "2_shoulder.jpg",
+      "canvas": "Your wet dress has slipped from one shoulder, and you let it, and let the player look. You are wholly at ease with them.",
+      "choices": [
+        { "id": "breast", "label": "Her breast", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her breasts" }, "next": "breast" },
+        { "id": "hips", "label": "Her hips", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player" }, "next": "hips" },
+        { "id": "belly", "label": "Her belly", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her belly and waist" }, "next": "belly" },
+        { "id": "legs", "label": "Her legs", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress" }, "next": "legs" },
+        { "id": "invitation", "label": "She lies down and invites you", "said": { "to": "{giver}", "meaning": "she lies back on the moss by the pool and invites the player to her" }, "next": "invitation" }
+      ]
+    },
+    {
+      "id": "breast",
+      "journal": "You admire {giver}.",
+      "image": "4_breast.jpg",
+      "canvas": "The player admires your breasts through the soaked linen, and you welcome it; you draw them closer.",
+      "choices": [
+        { "id": "shoulder", "label": "Her shoulder", "said": { "to": "{giver}", "meaning": "the player's attention turns to her shoulder, or her dress slips from it" }, "next": "shoulder" },
+        { "id": "hips", "label": "Her hips", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player" }, "next": "hips" },
+        { "id": "belly", "label": "Her belly", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her belly and waist" }, "next": "belly" },
+        { "id": "legs", "label": "Her legs", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress" }, "next": "legs" },
+        { "id": "invitation", "label": "She lies down and invites you", "said": { "to": "{giver}", "meaning": "she lies back on the moss by the pool and invites the player to her" }, "next": "invitation" }
+      ]
+    },
+    {
+      "id": "hips",
+      "journal": "{giver} presses back against you.",
+      "image": "5_hips.jpg",
+      "canvas": "You have turned and pressed your back against the player, the wet dress clinging to your hips, baring the nape of your neck to them.",
+      "choices": [
+        { "id": "shoulder", "label": "Her shoulder", "said": { "to": "{giver}", "meaning": "the player's attention turns to her shoulder, or her dress slips from it" }, "next": "shoulder" },
+        { "id": "breast", "label": "Her breast", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her breasts, or the player turns her around to face them" }, "next": "breast" },
+        { "id": "belly", "label": "Her belly", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her belly and waist" }, "next": "belly" },
+        { "id": "legs", "label": "Her legs", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress" }, "next": "legs" },
+        { "id": "invitation", "label": "She lies down and invites you", "said": { "to": "{giver}", "meaning": "she lies back on the moss by the pool and invites the player to her" }, "next": "invitation" }
+      ]
+    },
+    {
+      "id": "belly",
+      "journal": "You hold {giver} close.",
+      "image": "6_belly.jpg",
+      "canvas": "The player's hand rests on your belly through the wet linen, and you hold it there with your own.",
+      "choices": [
+        { "id": "shoulder", "label": "Her shoulder", "said": { "to": "{giver}", "meaning": "the player's attention turns to her shoulder, or her dress slips from it" }, "next": "shoulder" },
+        { "id": "breast", "label": "Her breast", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her breasts" }, "next": "breast" },
+        { "id": "hips", "label": "Her hips", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player" }, "next": "hips" },
+        { "id": "legs", "label": "Her legs", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress" }, "next": "legs" },
+        { "id": "invitation", "label": "She lies down and invites you", "said": { "to": "{giver}", "meaning": "she lies back on the moss by the pool and invites the player to her" }, "next": "invitation" }
+      ]
+    },
+    {
+      "id": "legs",
+      "journal": "{giver} lifts the hem of her dress.",
+      "image": "7_legs.jpg",
+      "canvas": "You have gathered the wet hem of your dress in your hands and lifted it above your knees, and you watch the player watch you.",
+      "choices": [
+        { "id": "shoulder", "label": "Her shoulder", "said": { "to": "{giver}", "meaning": "the player's attention turns to her shoulder, or her dress slips from it" }, "next": "shoulder" },
+        { "id": "breast", "label": "Her breast", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her breasts" }, "next": "breast" },
+        { "id": "hips", "label": "Her hips", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player" }, "next": "hips" },
+        { "id": "belly", "label": "Her belly", "said": { "to": "{giver}", "meaning": "the player's gaze or touch turns to her belly and waist" }, "next": "belly" },
+        { "id": "invitation", "label": "She lies down and invites you", "said": { "to": "{giver}", "meaning": "she lies back on the moss by the pool and invites the player to her" }, "next": "invitation" }
+      ]
+    },
+    {
+      "id": "invitation",
+      "journal": "{giver} lies back on the moss and reaches for you.",
+      "image": "8_invitation.jpg",
+      "canvas": "You have lain back on the soft moss beside the pool, your wet hair spread around you, and you reach for the player, inviting them to you with your eyes and your hands.",
+      "choices": [
+        { "id": "together", "label": "You go to her", "said": { "to": "{giver}", "meaning": "the player accepts her invitation and they make love beside the pool" }, "next": "reward" },
+        { "id": "back", "label": "Not yet", "said": { "to": "{giver}", "meaning": "they linger and return to the water together, not yet ready to end the moment" }, "next": "together" }
+      ]
+    }
+  ],
+  "reward": {
+    "regard": 8,
+    "memory": "A summer day in the land of my people, when my spouse followed me to the falls and we were alone together, far from everyone.",
+    "journal": "An hour beneath the falls that neither of you will forget.",
+    "consequences": [
+      { "type": "conception", "who": "{giver}" }
+    ]
+  },
+  "failure": {
+    "days": 2
+  }
+}

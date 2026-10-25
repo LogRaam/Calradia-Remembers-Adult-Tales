@@ -1,0 +1,576 @@
+{
+  "id": "crit_wife_empire_stream",
+  "title": "The Stream in the Wood",
+  "author": "Gabriel Mailhot",
+  "requires": {
+    "giver": {
+      "role": "spouse",
+      "gender": "female",
+      "culture": "empire",
+      "with_player": true,
+      "not_pregnant": true,
+      "min_regard": 10,
+      "not_at_war_with_player": false
+    },
+    "content": "explicit"
+  },
+  "on_map": {
+    "still_hours": 3,
+    "by_day": true,
+    "in_givers_lands": true,
+    "chance_per_day": 0.15,
+    "invitation": "While your company rests in the shade of the wood, {giver} unpins her hair and walks down toward a clear stream, her gold armband glinting. At the trees she turns, smiles at you, and goes on.",
+    "accept": "Follow her",
+    "decline": "Let her have her solitude"
+  },
+  "binds": {
+    "giver": "the player's imperial wife, travelling with them"
+  },
+  "stages": [
+    {
+      "id": "invite",
+      "journal": "{giver} walked down toward a stream in the wood.",
+      "objective": {
+        "type": "talk_to",
+        "hero": "{giver}"
+      },
+      "on_complete": {
+        "next": "found"
+      }
+    },
+    {
+      "id": "found",
+      "journal": "You found {giver} bathing in the stream.",
+      "image": "1_found_bathing.jpg",
+      "canvas": "You went down to bathe in the clear stream in your thin draped dress, as the ladies of the Empire do in summer. You know the player followed you; you let them find you.",
+      "choices": [
+        {
+          "id": "joins",
+          "label": "She comes to you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she sees the player and wades over to them, or the player goes to her, and they come close together"
+          },
+          "next": "approach"
+        }
+      ]
+    },
+    {
+      "id": "approach",
+      "journal": "{giver} wades toward you.",
+      "image": "3a_before_she_joins_him.jpg",
+      "canvas": "You have seen the player and you wade toward them through the stream, the wet drapery slipping, smiling.",
+      "choices": [
+        {
+          "id": "together",
+          "label": "She reaches you",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she reaches the player and takes their hand, or they meet in the water"
+          },
+          "next": "together"
+        }
+      ]
+    },
+    {
+      "id": "together",
+      "journal": "{giver} takes your hand.",
+      "image": "3b_she_joins_him.jpg",
+      "canvas": "You have reached the player and taken their hand, laughing, drawing them into the water. An hour alone with your spouse, in the land of your people.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "breast_bare",
+          "label": "Her drapery falls",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she lets the drapery fall from her breasts, or the player draws it down"
+          },
+          "next": "breast_bare"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you into the meadow",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she leads the player out of the water into the flowering meadow and sits among the flowers, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "shoulder",
+      "journal": "{giver}'s shoulder.",
+      "image": "2_shoulder.jpg",
+      "canvas": "Your drapery has slipped to your arm, baring your shoulder; you let the player look.",
+      "choices": [
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "breast_bare",
+          "label": "Her drapery falls",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she lets the drapery fall from her breasts, or the player draws it down"
+          },
+          "next": "breast_bare"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you into the meadow",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she leads the player out of the water into the flowering meadow and sits among the flowers, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "breast",
+      "journal": "You admire {giver}.",
+      "image": "4a_breast.jpg",
+      "canvas": "The player admires your breasts beneath the wet drapery, and you welcome it.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast_bare",
+          "label": "Her drapery falls",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she lets the drapery fall from her breasts, or the player draws it down"
+          },
+          "next": "breast_bare"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you into the meadow",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she leads the player out of the water into the flowering meadow and sits among the flowers, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "breast_bare",
+      "journal": "{giver} lets her drapery fall.",
+      "image": "4b_breast_nude.jpg",
+      "canvas": "You let the wet drapery fall from your breasts for the player.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you into the meadow",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she leads the player out of the water into the flowering meadow and sits among the flowers, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "hips",
+      "journal": "{giver} turns her back to you.",
+      "image": "5_hips.jpg",
+      "canvas": "You have turned your back to the player, lifting the wet drapery from your hips.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "breast_bare",
+          "label": "Her drapery falls",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she lets the drapery fall from her breasts, or the player draws it down"
+          },
+          "next": "breast_bare"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you into the meadow",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she leads the player out of the water into the flowering meadow and sits among the flowers, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "belly",
+      "journal": "You admire {giver}.",
+      "image": "6_belly.jpg",
+      "canvas": "The player's gaze is on your belly where the drapery hangs low.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "breast_bare",
+          "label": "Her drapery falls",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she lets the drapery fall from her breasts, or the player draws it down"
+          },
+          "next": "breast_bare"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "legs",
+          "label": "Her legs",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her legs, or she lifts the hem of her dress"
+          },
+          "next": "legs"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you into the meadow",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she leads the player out of the water into the flowering meadow and sits among the flowers, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "legs",
+      "journal": "{giver} lifts her drapery.",
+      "image": "7_legs.jpg",
+      "canvas": "You gather the wet drapery above your knees in the stream.",
+      "choices": [
+        {
+          "id": "shoulder",
+          "label": "Her shoulder",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's attention turns to her shoulder or neck, or her wet dress slips from it"
+          },
+          "next": "shoulder"
+        },
+        {
+          "id": "breast",
+          "label": "Her breast",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her breasts"
+          },
+          "next": "breast"
+        },
+        {
+          "id": "breast_bare",
+          "label": "Her drapery falls",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she lets the drapery fall from her breasts, or the player draws it down"
+          },
+          "next": "breast_bare"
+        },
+        {
+          "id": "hips",
+          "label": "Her hips",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her hips and backside, or she turns and presses back against the player"
+          },
+          "next": "hips"
+        },
+        {
+          "id": "belly",
+          "label": "Her belly",
+          "said": {
+            "to": "{giver}",
+            "meaning": "the player's gaze or touch turns to her belly and waist"
+          },
+          "next": "belly"
+        },
+        {
+          "id": "invitation",
+          "label": "She draws you into the meadow",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she leads the player out of the water into the flowering meadow and sits among the flowers, inviting them"
+          },
+          "next": "invitation"
+        }
+      ]
+    },
+    {
+      "id": "invitation",
+      "journal": "{giver} sits among the flowers and calls you.",
+      "image": "8a_meadow.jpg",
+      "canvas": "You have led the player out of the stream into a meadow of wild flowers, and you sit among them, inviting them to you.",
+      "choices": [
+        {
+          "id": "closer",
+          "label": "She lies back among the flowers",
+          "said": {
+            "to": "{giver}",
+            "meaning": "she lies back among the flowers and draws the player down to her"
+          },
+          "next": "meadow"
+        },
+        {
+          "id": "back",
+          "label": "Not yet",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they linger and return to the water together, not yet ready"
+          },
+          "next": "together"
+        }
+      ]
+    },
+    {
+      "id": "meadow",
+      "journal": "{giver} lies back among the flowers.",
+      "image": "8b_meadow.jpg",
+      "canvas": "You lie back among the flowers, smiling up at the player, your drapery fallen open.",
+      "choices": [
+        {
+          "id": "as_one",
+          "label": "You are together",
+          "said": {
+            "to": "{giver}",
+            "meaning": "they make love, or their lovemaking reaches its end"
+          },
+          "next": "reward"
+        }
+      ]
+    }
+  ],
+  "reward": {
+    "regard": 8,
+    "memory": "A summer day in the land of my people, when my spouse followed me to a stream in the wood and we lay together in a meadow of flowers.",
+    "journal": "A day by the stream that neither of you will forget.",
+    "consequences": [
+      {
+        "type": "conception",
+        "who": "{giver}"
+      }
+    ]
+  },
+  "failure": {
+    "days": 2
+  }
+}
