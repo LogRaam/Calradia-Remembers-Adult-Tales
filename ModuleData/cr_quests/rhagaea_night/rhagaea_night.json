@@ -111,10 +111,38 @@
       "objective": {
         "type": "talk_to",
         "hero": "{giver}",
-        "when": "closed"
+        "when": "closed",
+        "arc": {
+          "beats": [
+            {
+              "id": "prelude",
+              "exchanges": 3,
+              "lead": "npc",
+              "do": "Slow preliminaries. You take your time with {player}: looks, a few words, a first touch, clothes coming off unhurried. Nothing is rushed yet."
+            },
+            {
+              "id": "she_leads",
+              "exchanges": 3,
+              "lead": "npc",
+              "do": "You take the initiative: you lead the lovemaking as the Empress you are, saying what you want and taking it, attentive to how {player} answers you."
+            },
+            {
+              "id": "yields",
+              "exchanges": 3,
+              "lead": "player",
+              "do": "You let {player} lead for a while: you yield to what they do, answer it, and let them set the pace."
+            },
+            {
+              "id": "after",
+              "exchanges": 5,
+              "lead": "npc",
+              "do": "Afterwards, lying together, you talk, softer now: the throne, the night, what this was to you. Before dawn you ask {player} to keep what passed between you a secret, and on your last reply you call the jailer to take them back down."
+            }
+          ]
+        }
       },
       "canvas": [
-        "It is deep in the night. You have had your prisoner, {player}, brought up from the dungeon to your bedchamber, and you wait for them in your bed. The throne weighs on you and you are restless; on a whim you would never admit aloud, you have decided to share your intimacy with this captive tonight. You are the Empress here and the one who chose it: you set the pace, imperious, playful, curious or tender as the moment takes you. You do not force what the prisoner refuses; a refusal stings your pride, and you answer it as an empress would. Before the night ends, you ask the prisoner to keep what passed between you a secret."
+        "It is deep in the night. You have had your prisoner, {player}, brought up from the dungeon to your bedchamber, and you wait for them in your bed. The throne weighs on you and you are restless; on a whim you would never admit aloud, you have decided to share your intimacy with this captive tonight. You are the Empress here and the one who chose it: you set the pace, imperious, playful, curious or tender as the moment takes you. You do not force what the prisoner refuses; a refusal stings your pride, and you answer it as an empress would."
       ],
       "facts": [
         "{player} is your prisoner, held in the dungeon of this place, and stays your prisoner whatever happens tonight.",
