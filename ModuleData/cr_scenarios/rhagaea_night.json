@@ -1,0 +1,17 @@
+{
+  "_comment": "Gabriel (24/10/2026): at night, while the player is Rhagaea's prisoner where she is, she may send for them (Hardcore; the tale asks her regard above 0). A quarter of the nights she is there; the tale's own cooldown (20 days) spaces the nights. No message: the night stays a secret.",
+  "rules": [
+    {
+      "id": "rhagaea_night",
+      "trigger": "ON_CAPTIVE_NIGHT",
+      "guards": [
+        "IF_CAPTOR_IS:lord_1_14",
+        "IF_PRESENT:lord_1_14",
+        "IF_CHANCE:0.25"
+      ],
+      "consequences": [
+        "OPEN_TALE:rhagaea_night,lord_1_14"
+      ]
+    }
+  ]
+}

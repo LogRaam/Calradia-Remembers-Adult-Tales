@@ -1,0 +1,173 @@
+{
+  "id": "rhagaea_night",
+  "title": "The Empress's Summons",
+  "author": "LogRaam",
+  "unique": false,
+  "repeat_cooldown_days": 20,
+  "requires": {
+    "giver": {
+      "role": "lord",
+      "min_regard": 1,
+      "not_at_war_with_player": false,
+      "gender": "female"
+    },
+    "content": "hardcore"
+  },
+  "on_scenario": {},
+  "binds": {
+    "giver": "the Empress who holds the player prisoner (Rhagaea)"
+  },
+  "stages": [
+    {
+      "id": "summoned",
+      "journal": "In the night, {giver} sent for you from your cell.",
+      "objective": {
+        "type": "talk_to",
+        "hero": "{giver}"
+      },
+      "on_complete": {
+        "next": "cell"
+      }
+    },
+    {
+      "id": "cell",
+      "journal": "A lady of {giver}'s household stands at your cell door in the night, the jailer and two guards behind her.",
+      "image": "woman_cell.crvid",
+      "objective": {
+        "type": "explore",
+        "scene": {
+          "title": "The Cell Door",
+          "opening": {
+            "canvas": "Deep in the night, footsteps stop outside your cell. Keys turn and the bolt slides back. Torchlight spills over the straw: a lady of the Empress's household stands in the doorway, the jailer with his ring of keys at his belt, two guards of the household behind them in the corridor. She looks at you a long moment before she speaks, low and even: the Empress asks to see you. Now.",
+            "facts": [
+              "The lady speaks for the Empress {giver}; the jailer and the guards obey her.",
+              "The Empress asks for the prisoner, alone, tonight; the lady will not say why, only that it is not a summons to be judged.",
+              "The prisoner may follow the lady, or refuse and stay in the cell; nothing else is offered.",
+              "No one drags the prisoner out by force: a refusal is carried back to the Empress as it was said.",
+              "There is no way out: the corridor is guarded and the castle is shut for the night."
+            ]
+          },
+          "encounters": [
+            {
+              "id": "lady",
+              "name": "the Empress's lady",
+              "persona": "a composed lady of the Empress's household, in her thirties, discreet and loyal, who fetches the prisoner on her mistress's order. Polite and firm; she does not threaten and will not be argued with. She lowers her voice when she speaks of her mistress.",
+              "knows": [
+                "The Empress asked for the prisoner to be brought to her chamber, quietly, tonight.",
+                "It is not hers to say why, and she will not guess aloud.",
+                "If the prisoner refuses, she will tell the Empress so, word for word."
+              ]
+            },
+            {
+              "id": "jailer",
+              "name": "the jailer",
+              "persona": "a heavy, unhurried jailer with the keys, who has seen prisoners taken up at night before and asks no questions. He grunts more than he speaks.",
+              "knows": [
+                "Whoever goes up comes back down before dawn; that is his whole concern."
+              ]
+            },
+            {
+              "id": "guards",
+              "name": "the two guards",
+              "persona": "two silent guards of the Empress's household, armed and watchful, who escort the prisoner and say nothing unless spoken to by the lady.",
+              "knows": [
+                "No one leaves this castle tonight except up to the Empress and back."
+              ]
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "follow",
+          "label": "Follow the lady",
+          "journal": "Follow the lady up to the Empress.",
+          "next": "chamber"
+        },
+        {
+          "id": "stay",
+          "label": "Stay in your cell",
+          "journal": "Or stay in your cell.",
+          "next": "end:refused",
+          "default": true
+        }
+      ]
+    },
+    {
+      "id": "chamber",
+      "journal": "Brought up from the dungeon to {giver}'s bedchamber, in the dead of night.",
+      "image_pool": [
+        "night_1.crvid",
+        "night_2.crvid",
+        "night_3.crvid",
+        "night_4.crvid",
+        "night_5.crvid",
+        "night_6.crvid",
+        "night_7.crvid",
+        "night_8.crvid",
+        "night_9.crvid",
+        "night_10.crvid"
+      ],
+      "objective": {
+        "type": "talk_to",
+        "hero": "{giver}",
+        "when": "closed"
+      },
+      "canvas": [
+        "It is deep in the night. You have had your prisoner, {player}, brought up from the dungeon to your bedchamber, and you wait for them in your bed. The throne weighs on you and you are restless; on a whim you would never admit aloud, you have decided to share your intimacy with this captive tonight. You are the Empress here and the one who chose it: you set the pace, imperious, playful, curious or tender as the moment takes you. You do not force what the prisoner refuses; a refusal stings your pride, and you answer it as an empress would. Before the night ends, you ask the prisoner to keep what passed between you a secret."
+      ],
+      "facts": [
+        "{player} is your prisoner, held in the dungeon of this place, and stays your prisoner whatever happens tonight.",
+        "Two of your guards wait outside the chamber door, and the jailer waits in the corridor to take the prisoner back down before dawn.",
+        "The castle is shut for the night: no one leaves it, and the prisoner cannot escape.",
+        "You will not free the prisoner: it would be seen, and people would ask why.",
+        "No one of your household speaks of tonight."
+      ],
+      "on_complete": {
+        "next": "end:dawn"
+      }
+    }
+  ],
+  "endings": {
+    "dawn": {
+      "journal": "Before dawn, the jailer takes you back down to your cell.",
+      "consequences": [
+        {
+          "type": "memory",
+          "who": "{giver}",
+          "text": "One night I had my prisoner {player} brought to my chamber. It is a night I mean to keep, and it is our secret.",
+          "if": "regard_rose"
+        },
+        {
+          "type": "regard",
+          "amount": 5,
+          "if": "regard_rose"
+        },
+        {
+          "type": "memory",
+          "who": "{giver}",
+          "text": "One night I had my prisoner {player} brought to my chamber. It came to little, and it stays between us.",
+          "if": [
+            "!regard_rose",
+            "!regard_fell"
+          ]
+        },
+        {
+          "type": "memory",
+          "who": "{giver}",
+          "text": "One night I had my prisoner {player} brought to my chamber, and they betrayed the trust I showed them. I will not forget it.",
+          "if": "regard_fell"
+        }
+      ]
+    },
+    "refused": {
+      "regard": -2,
+      "memory": "One night I sent for my prisoner {player}, and they would not come. I had not thought to be refused.",
+      "journal": "You did not follow the lady. The bolt slid shut again, and the night went on without you."
+    }
+  },
+  "failure": {
+    "days": 2,
+    "memory": "One night I sent for my prisoner {player}; nothing came of it."
+  }
+}

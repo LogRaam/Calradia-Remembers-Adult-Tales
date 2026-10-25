@@ -1,0 +1,16 @@
+{
+  "_comment": "PLAY TEST ONLY: the same rule at every chance, for cr.scenario_fire ON_CAPTIVE_NIGHT right after cr.captive_talk_probe jail Rhagaea. Never ship it.",
+  "rules": [
+    {
+      "id": "rhagaea_night_test",
+      "trigger": "ON_CAPTIVE_NIGHT",
+      "guards": [
+        "IF_CAPTOR_IS:lord_1_14",
+        "IF_PRESENT:lord_1_14"
+      ],
+      "consequences": [
+        "OPEN_TALE:rhagaea_night,lord_1_14"
+      ]
+    }
+  ]
+}

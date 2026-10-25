@@ -1,0 +1,36 @@
+# Calradia Remembers - Adult Tales
+
+Gabriel, 25/10/2026: a mod of its own, beside Calradia Remembers, for the Hardcore tales and their videos. It will have
+its own Nexus page when Gabriel is ready; until then it is installed on his machine for testing, and it never ships
+inside Calradia Remembers (CR's release tools refuse its files).
+
+A Bannerlord module (`SubModule.xml`, id `CalradiaRemembersAdultTales`) that depends on Calradia Remembers v2.7.21 or
+later (the tales use `on_scenario`, `ON_CAPTIVE_NIGHT`, `image_pool`). CR reads another mod's tales from its
+`ModuleData/cr_quests` and its scenario rules from `ModuleData/cr_scenarios`.
+
+## The tales
+
+**The Empress's Summons** (`ModuleData/cr_quests/rhagaea_night/`, rule `ModuleData/cr_scenarios/rhagaea_night.json`).
+At Hardcore, while the player is Rhagaea's prisoner in the town or castle where she is, at night (a 25% chance a night,
+her regard above 0, at most every 20 days), a lady of her household comes to the cell with the jailer and two guards: a
+narrated scene at the cell door (`woman_cell.crvid`). The player follows her (the conversation with Rhagaea in her
+bedchamber opens by itself, one of `night_1.crvid` to `night_10.crvid` beside it, a new one each time) or stays (the
+tale ends, Rhagaea disappointed, -2 regard). The night is judged by the game: her regard higher at the end than at the
+start, a warm secret memory and +5; unchanged, a neutral memory; lower, a bitter one. Both sexes, no child, the player
+stays a prisoner. No realm news: the night stays a secret.
+
+The videos (about 195 MB) are not in git: OneDrive keeps them in the tale's folder.
+
+## Testing it on your machine
+
+1. Game closed (or reload a campaign after): `python Tools/Release/install_adult_tales.py --play-test`
+   (copies the module to the game's `Modules/CalradiaRemembersAdultTales`, with the rule that opens the night at every
+   chance; without `--play-test`, the real 25% rule only).
+2. In the launcher, enable **Calradia Remembers - Adult Tales**, after Calradia Remembers.
+3. In the MCM: Authored Quests on, content level Hardcore.
+4. In game: `cr.rep_set 10 Rhagaea` (her regard above 0), `cr.captive_talk_probe jail Rhagaea` (held in her house's
+   nearest town or castle, Rhagaea brought there), then `cr.scenario_fire ON_CAPTIVE_NIGHT`.
+5. Play the scene at the cell door, follow the lady, play the night, close the chat. `cr.story_status` and Rhagaea's
+   memories show how it ended; `cr.captive_talk_probe free` ends the captivity.
+
+`python Tools/Release/install_adult_tales.py --remove` takes the module out of the game.

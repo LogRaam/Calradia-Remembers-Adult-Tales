@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module>
+    <Name value="Calradia Remembers - Adult Tales" />
+    <Id value="CalradiaRemembersAdultTales" />
+    <Version value="v1.0.0" />
+    <SingleplayerModule value="true" />
+    <MultiplayerModule value="false" />
+    <DependedModules>
+        <DependedModule Id="CalradiaRemembers" DependentVersion="v2.7.21" />
+    </DependedModules>
+    <SubModules />
+</Module>
