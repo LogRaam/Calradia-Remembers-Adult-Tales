@@ -3,7 +3,7 @@
   "title": "The Empress's Summons",
   "author": "LogRaam",
   "unique": false,
-  "repeat_cooldown_days": 20,
+  "repeat_cooldown_days": 60,
   "requires": {
     "giver": {
       "role": "lord",

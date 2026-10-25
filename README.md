@@ -13,7 +13,7 @@ later (the tales use `on_scenario`, `ON_CAPTIVE_NIGHT`, `image_pool`). CR reads 
 
 **The Empress's Summons** (`ModuleData/cr_quests/rhagaea_night/`, rule `ModuleData/cr_scenarios/rhagaea_night.json`).
 At Hardcore, while the player is Rhagaea's prisoner in the town or castle where she is, at night (a 25% chance a night,
-her regard above 0, at most every 20 days), a lady of her household comes to the cell with the jailer and two guards: a
+her regard above 0, at most every 60 days), a lady of her household comes to the cell with the jailer and two guards: a
 narrated scene at the cell door (`woman_cell.crvid`). The player follows her (the conversation with Rhagaea in her
 bedchamber opens by itself, one of `night_1.crvid` to `night_10.crvid` beside it, a new one each time) or stays (the
 tale ends, Rhagaea disappointed, -2 regard). The night is judged by the game: her regard higher at the end than at the
