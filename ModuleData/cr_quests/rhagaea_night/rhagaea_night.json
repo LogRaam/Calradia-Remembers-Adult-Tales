@@ -113,6 +113,18 @@
         "hero": "{giver}",
         "when": "closed",
         "arc": {
+          "signals": [
+            {
+              "id": "npc_climaxed",
+              "means": "{giver} reaches her climax in this reply",
+              "net": {
+                "after": 6,
+                "chance": 0.5
+              }
+            }
+          ],
+          "max_exchanges": 30,
+          "final": "after",
           "beats": [
             {
               "id": "prelude",
@@ -124,13 +136,24 @@
               "id": "she_leads",
               "exchanges": 3,
               "lead": "npc",
+              "listens": "npc_climaxed",
               "do": "You take the initiative: you lead the lovemaking as the Empress you are, saying what you want and taking it, attentive to how {player} answers you."
             },
             {
               "id": "yields",
               "exchanges": 3,
               "lead": "player",
-              "do": "You let {player} lead for a while: you yield to what they do, answer it, and let them set the pace."
+              "listens": "npc_climaxed",
+              "do": "You let {player} lead for a while: you yield to what they do, answer it, and let them set the pace.",
+              "next": [
+                {
+                  "if": "npc_climaxed",
+                  "to": "after"
+                },
+                {
+                  "to": "she_leads"
+                }
+              ]
             },
             {
               "id": "after",
