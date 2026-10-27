@@ -81,8 +81,8 @@
         {
           "id": "follow",
           "label": "Follow the lady",
-          "journal": "Follow the lady up to the Empress.",
-          "next": "chamber"
+          "journal": "Follow the lady out of the dungeon.",
+          "next": "bath"
         },
         {
           "id": "stay",
@@ -94,8 +94,109 @@
       ]
     },
     {
+      "id": "bath",
+      "journal": "The lady takes you not up to the Empress but down a passage to the household's small warm bath.",
+      "objective": {
+        "type": "explore",
+        "scene": {
+          "title": "The Warm Bath",
+          "opening": {
+            "canvas": "The lady does not take you up the great stair. She leads you down a narrow passage, the guards a few steps behind, to a small vaulted room where steam rises from a sunken basin fed by a warm spring. Oil lamps burn in the niches; folded linen and a clean night robe wait on a stone bench. The guards stay at the door. The lady sets her torch in its ring and turns to you: you will not go to the Empress smelling of the dungeon.",
+            "facts": [
+              "The lady undresses the prisoner and washes them herself, unhurried and thorough, from the hair to the feet; it is her mistress's order and she does it with care, as a task she knows well.",
+              "She goes no further than the washing; the night is her mistress's, not hers.",
+              "Afterwards she dries the prisoner and dresses them in clean night clothes of fine linen.",
+              "The guards wait at the door and do not look in.",
+              "When the prisoner is washed and dressed, she leads them on to the Empress's door; the prisoner may also ask to be taken back to the cell, and she will not argue."
+            ]
+          },
+          "encounters": [
+            {
+              "id": "lady",
+              "name": "the Empress's lady",
+              "persona": "a composed lady of the Empress's household, in her thirties, discreet and loyal, who fetches the prisoner on her mistress's order. Polite and firm; she does not threaten and will not be argued with. She lowers her voice when she speaks of her mistress.",
+              "knows": [
+                "Her mistress wants the prisoner washed and dressed in clean night clothes before they come to her.",
+                "It is not hers to say why the Empress sent for the prisoner, and she will not guess aloud.",
+                "If the prisoner will go no further, she will take them back down and tell the Empress so, word for word."
+              ]
+            },
+            {
+              "id": "guards",
+              "name": "the two guards",
+              "persona": "two silent guards of the Empress's household who wait at the bath's door with their backs turned, and say nothing unless spoken to by the lady.",
+              "knows": [
+                "No one leaves this castle tonight except up to the Empress and back."
+              ]
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "dressed",
+          "label": "Go with her to the Empress's door",
+          "journal": "Washed and dressed, go with the lady to the Empress's door.",
+          "next": "door"
+        },
+        {
+          "id": "back_from_bath",
+          "label": "Ask to be taken back to your cell",
+          "journal": "Or ask to be taken back to your cell.",
+          "next": "end:turned_back",
+          "default": true
+        }
+      ]
+    },
+    {
+      "id": "door",
+      "journal": "Washed and in clean night clothes, you are led up to the door of {giver}'s chamber.",
+      "objective": {
+        "type": "explore",
+        "scene": {
+          "title": "The Empress's Door",
+          "opening": {
+            "canvas": "Up a quiet stair and along a gallery where the lamps are turned low, the lady brings you to a tall door of dark wood. Two guards of the household stand on either side of it and step aside without a word. Lamplight shows beneath the door. The lady stops, smooths the linen of your robe at the shoulder, and looks at you: her task ends here.",
+            "facts": [
+              "This is the door of the Empress {giver}'s bedchamber; she waits inside, awake.",
+              "The lady's task ends at this door: she does not go in, and says so, then invites the prisoner to enter.",
+              "The prisoner may go in, or ask to be taken back to the cell; no one pushes them through the door.",
+              "The guards at the door say nothing and do not move."
+            ]
+          },
+          "encounters": [
+            {
+              "id": "lady",
+              "name": "the Empress's lady",
+              "persona": "a composed lady of the Empress's household, in her thirties, discreet and loyal, who fetches the prisoner on her mistress's order. Polite and firm; she does not threaten and will not be argued with. She lowers her voice when she speaks of her mistress.",
+              "knows": [
+                "Her mistress waits inside for the prisoner, alone.",
+                "Her own task ends at this door.",
+                "If the prisoner turns back now, she will take them down and tell the Empress so, word for word."
+              ]
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "enter",
+          "label": "Enter the chamber",
+          "journal": "Enter the Empress's chamber.",
+          "next": "chamber"
+        },
+        {
+          "id": "back_from_door",
+          "label": "Turn back",
+          "journal": "Or turn back at the door.",
+          "next": "end:turned_back",
+          "default": true
+        }
+      ]
+    },
+    {
       "id": "chamber",
-      "journal": "Brought up from the dungeon to {giver}'s bedchamber, in the dead of night.",
+      "journal": "You enter {giver}'s bedchamber, in the dead of night.",
       "image_pool": [
         "night_1.crvid",
         "night_2.crvid",
@@ -169,6 +270,8 @@
       ],
       "facts": [
         "{player} is your prisoner, held in the dungeon of this place, and stays your prisoner whatever happens tonight.",
+        "{player} comes to you washed by your lady in your household's bath and dressed in clean night clothes, as you ordered.",
+        "Your lady brought {player} to your door and left them there; the two of you are alone.",
         "Two of your guards wait outside the chamber door, and the jailer waits in the corridor to take the prisoner back down before dawn.",
         "The castle is shut for the night: no one leaves it, and the prisoner cannot escape.",
         "You will not free the prisoner: it would be seen, and people would ask why.",
@@ -215,6 +318,11 @@
       "regard": -2,
       "memory": "One night I sent for my prisoner {player}, and they would not come. I had not thought to be refused.",
       "journal": "You did not follow the lady. The bolt slid shut again, and the night went on without you."
+    },
+    "turned_back": {
+      "regard": -2,
+      "memory": "One night I sent for my prisoner {player}; they came part of the way, and turned back before my door.",
+      "journal": "You would go no further. The lady took you back down without a word, and the bolt slid shut again."
     }
   },
   "failure": {
