@@ -1,5 +1,5 @@
 # Gabriel's originals (the .crvid made from them is what the tale shows)
 *.mp4
 Woman and guard at cell.jpg
-# The night videos (about 330 MB): kept out of git, backed up by OneDrive; how they ship is a release decision.
+# The night videos (eight, about 85 MB once recompressed to an SSIM level, 27/10/2026): kept out of git, backed up by OneDrive; how they ship is a release decision.
 night_*.crvid

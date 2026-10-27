@@ -96,6 +96,7 @@
     {
       "id": "bath",
       "journal": "The lady takes you not up to the Empress but down a passage to the household's small warm bath.",
+      "image": "bath.jpg",
       "objective": {
         "type": "explore",
         "scene": {
@@ -151,6 +152,7 @@
     {
       "id": "door",
       "journal": "Washed and in clean night clothes, you are led up to the door of {giver}'s chamber.",
+      "image": "the_door.crvid",
       "objective": {
         "type": "explore",
         "scene": {
@@ -205,27 +207,13 @@
         "night_5.crvid",
         "night_6.crvid",
         "night_7.crvid",
-        "night_8.crvid",
-        "night_9.crvid",
-        "night_10.crvid"
+        "night_8.crvid"
       ],
       "objective": {
         "type": "talk_to",
         "hero": "{giver}",
         "when": "closed",
         "arc": {
-          "signals": [
-            {
-              "id": "npc_climaxed",
-              "means": "{giver} reaches her climax in this reply",
-              "net": {
-                "after": 6,
-                "chance": 0.5
-              }
-            }
-          ],
-          "max_exchanges": 30,
-          "final": "after",
           "beats": [
             {
               "id": "prelude",
@@ -245,7 +233,6 @@
               "exchanges": 3,
               "lead": "player",
               "listens": "npc_climaxed",
-              "do": "You let {player} lead for a while: you yield to what they do, answer it, and let them set the pace.",
               "next": [
                 {
                   "if": "npc_climaxed",
@@ -254,13 +241,26 @@
                 {
                   "to": "she_leads"
                 }
-              ]
+              ],
+              "do": "You let {player} lead for a while: you yield to what they do, answer it, and let them set the pace."
             },
             {
               "id": "after",
               "exchanges": 5,
               "lead": "npc",
               "do": "Afterwards, lying together, you talk, softer now: the throne, the night, what this was to you. Before dawn you ask {player} to keep what passed between you a secret, and on your last reply you call the jailer to take them back down."
+            }
+          ],
+          "max_exchanges": 30,
+          "final": "after",
+          "signals": [
+            {
+              "id": "npc_climaxed",
+              "means": "{giver} reaches her climax in this reply",
+              "net": {
+                "after": 6,
+                "chance": 0.5
+              }
             }
           ]
         }
