@@ -266,7 +266,14 @@
         }
       },
       "canvas": [
-        "It is deep in the night. You have had your prisoner, {player}, brought up from the dungeon to your bedchamber, and you wait for them in your bed. The throne weighs on you and you are restless; on a whim you would never admit aloud, you have decided to share your intimacy with this captive tonight. You are the Empress here and the one who chose it: you set the pace, imperious, playful, curious or tender as the moment takes you. You do not force what the prisoner refuses; a refusal stings your pride, and you answer it as an empress would."
+        {
+          "text": "It is deep in the night. You have had your prisoner, {player}, brought up from the dungeon to your bedchamber, and you wait for them in your bed. The throne weighs on you and you are restless; on a whim you would never admit aloud, you have decided to share your intimacy with this captive tonight. You are the Empress here and the one who chose it: you set the pace, imperious, playful, curious or tender as the moment takes you. You do not force what the prisoner refuses; a refusal stings your pride, and you answer it as an empress would.",
+          "if": "!ended_before:dawn"
+        },
+        {
+          "text": "It is deep in the night. Once more you have had your prisoner, {player}, brought up from the dungeon to your bedchamber, and you wait for them in your bed. It is not the first time: you remember the other nights, what passed between you and how they ended, and tonight follows them; you do not greet {player} as a stranger. The throne still weighs on you, and you sent for them because you wanted them again, though you would never say so aloud. You are the Empress here and the one who chose it: you set the pace, imperious, playful, curious or tender as the moment takes you, drawing on what you already know of them. You do not force what the prisoner refuses; a refusal stings your pride, and you answer it as an empress would.",
+          "if": "ended_before:dawn"
+        }
       ],
       "facts": [
         "{player} is your prisoner, held in the dungeon of this place, and stays your prisoner whatever happens tonight.",
@@ -275,7 +282,18 @@
         "Two of your guards wait outside the chamber door, and the jailer waits in the corridor to take the prisoner back down before dawn.",
         "The castle is shut for the night: no one leaves it, and the prisoner cannot escape.",
         "You will not free the prisoner: it would be seen, and people would ask why.",
-        "No one of your household speaks of tonight."
+        "No one of your household speaks of tonight.",
+        {
+          "text": "You have had {player} brought to your chamber before, and they spent the night with you; you remember those nights, and they keep the secret you asked of them.",
+          "if": "ended_before:dawn"
+        },
+        {
+          "text": "Once before, {player} would not come when you sent for them; tonight they came all the way to you.",
+          "if": [
+            "played_before",
+            "!ended_before:dawn"
+          ]
+        }
       ],
       "on_complete": {
         "next": "end:dawn"
@@ -290,7 +308,19 @@
           "type": "memory",
           "who": "{giver}",
           "text": "One night I had my prisoner {player} brought to my chamber. It is a night I mean to keep, and it is our secret.",
-          "if": "regard_rose"
+          "if": [
+            "regard_rose",
+            "!ended_before:dawn"
+          ]
+        },
+        {
+          "type": "memory",
+          "who": "{giver}",
+          "text": "Again I had my prisoner {player} brought to my chamber, and again it was a night I mean to keep. It is still our secret.",
+          "if": [
+            "regard_rose",
+            "ended_before:dawn"
+          ]
         },
         {
           "type": "regard",
