@@ -6,7 +6,7 @@
     <SingleplayerModule value="true" />
     <MultiplayerModule value="false" />
     <DependedModules>
-        <DependedModule Id="CalradiaRemembers" DependentVersion="v2.7.20" />
+        <DependedModule Id="CalradiaRemembers" DependentVersion="v2.7.21" />
         <!-- Raise to the CR version that ships OPEN_TALE and tale arcs (2.7.21) when that version is numbered. -->
     </DependedModules>
     <SubModules />
